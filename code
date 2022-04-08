@@ -1,0 +1,33 @@
+import sys
+import random
+
+number = random.randint(1, 20)
+print("You have 3 attempts to guess the number, it is between 1-20")
+
+attempt1 = int(input("\nEnter your first attempt:"))
+if attempt1 == number:
+    print("You got it!")
+    sys.exit()
+elif attempt1 > number:
+    print("a little lower")
+elif attempt1 < number:
+    print("a little higher")
+
+attempt2 = int(input("\nEnter your second attempt:"))
+if attempt2 == number:
+    print("You got it!")
+    sys.exit()
+elif attempt2 > number:
+    print("too high!")
+elif attempt2 < number:
+    print("too low!")
+
+attempt3 = int(input("\nEnter your Final attempt:"))
+if attempt3 == number:
+    print("That was close! You got it on the last try!")
+elif attempt3 > number:
+    print("almost had it, game over!")
+    print("The number was : " + str(number))
+elif attempt3 < number:
+    print("almost had it, game over!")
+    print("The number was : " + str(number))
